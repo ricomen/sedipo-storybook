@@ -1,0 +1,137 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Colors" />
+
+# Цветовая палитра
+
+Палитра проекта основана на Bootstrap 5 с переопределёнными в
+`src/scss/_variables.scss` значениями. Цвет `info` намеренно удалён из
+`$theme-colors` (см. `src/scss/main.scss`).
+
+## Theme colors
+
+Семантические цвета, используемые в кнопках, бейджах, алертах, утилитах
+`text-*` / `bg-*` / `border-*` и т.д. Значения берутся из CSS-переменных
+Bootstrap (`--bs-*`), поэтому страница автоматически отражает реальные
+цвета скомпилированной темы и переключение `data-bs-theme`.
+
+## Базовые цвета
+
+<ColorPalette>
+  <ColorItem
+    title="black"
+    subtitle="$black · #000000"
+    colors={{ base: '#000000' }}
+  />
+  <ColorItem
+    title="white"
+    subtitle="$white · #FFFFFF"
+    colors={{ base: '#FFFFFF' }}
+  />
+
+  <ColorItem
+    title="primary"
+    subtitle="$primary · --bs-primary · #1961AA"
+    colors={{ base: 'var(--bs-primary)' }}
+  />
+  <ColorItem
+    title="secondary"
+    subtitle="$secondary · --bs-secondary · #656565"
+    colors={{ base: 'var(--bs-secondary)' }}
+  />
+  <ColorItem
+    title="success"
+    subtitle="$success · --bs-success · #198754"
+    colors={{ base: 'var(--bs-success)' }}
+  />
+  <ColorItem
+    title="warning"
+    subtitle="$warning · --bs-warning · #FFC107"
+    colors={{ base: 'var(--bs-warning)' }}
+  />
+  <ColorItem
+    title="danger"
+    subtitle="$danger · --bs-danger · #C20202"
+    colors={{ base: 'var(--bs-danger)' }}
+  />
+  <ColorItem
+    title="light"
+    subtitle="$light · --bs-light · #F7F7F7"
+    colors={{ base: 'var(--bs-light)' }}
+  />
+  <ColorItem
+    title="dark"
+    subtitle="$dark · --bs-dark · #2F2F2F"
+    colors={{ base: 'var(--bs-dark)' }}
+  />
+</ColorPalette>
+
+## Subtle / emphasis оттенки
+
+Дополнительные оттенки, которые Bootstrap выводит в `:root` для каждого
+theme-цвета. Используются в утилитах `text-*-emphasis`, `bg-*-subtle`,
+`border-*-subtle`.
+
+<ColorPalette>
+  <ColorItem
+    title="primary"
+    subtitle="primary / text-emphasis / bg-subtle / border-subtle"
+    colors={{
+      'primary': 'var(--bs-primary)' ,
+      'bg-subtle': 'var(--bs-primary-bg-subtle)',
+      'border-subtle': 'var(--bs-primary-border-subtle)',
+      'text-emphasis': 'var(--bs-primary-text-emphasis)',
+    }}
+  />
+
+  <ColorItem
+    title="success"
+    subtitle="success / text-emphasis / bg-subtle / border-subtle"
+    colors={{
+      'success': 'var(--bs-success)',
+      'bg-subtle': 'var(--bs-success-bg-subtle)',
+      'border-subtle': 'var(--bs-success-border-subtle)',
+      'text-emphasis': 'var(--bs-success-text-emphasis)',
+    }}
+  />
+  <ColorItem
+    title="warning"
+    subtitle="warning / text-emphasis / bg-subtle / border-subtle"
+    colors={{
+      'warning': 'var(--bs-warning)',
+      'bg-subtle': 'var(--bs-warning-bg-subtle)',
+      'border-subtle': 'var(--bs-warning-border-subtle)',
+      'text-emphasis': 'var(--bs-warning-text-emphasis)',
+    }}
+  />
+  <ColorItem
+    title="danger"
+    subtitle="text-emphasis / bg-subtle / border-subtle"
+    colors={{
+      'danger': 'var(--bs-danger)',
+      'bg-subtle': 'var(--bs-danger-bg-subtle)',
+      'border-subtle': 'var(--bs-danger-border-subtle)',
+      'text-emphasis': 'var(--bs-danger-text-emphasis)',
+    }}
+  />
+  <ColorItem
+    title="light"
+    subtitle="light / text-emphasis / bg-subtle / border-subtle"
+    colors={{
+      'light': 'var(--bs-light)',
+      'bg-subtle': 'var(--bs-light-bg-subtle)',
+      'border-subtle': 'var(--bs-light-border-subtle)',
+      'text-emphasis': 'var(--bs-light-text-emphasis)',
+    }}
+  />
+  <ColorItem
+    title="dark"
+    subtitle="dark / text-emphasis / bg-subtle / border-subtle"
+    colors={{
+      'dark': 'var(--bs-dark)',
+      'bg-subtle': 'var(--bs-dark-bg-subtle)',
+      'border-subtle': 'var(--bs-dark-border-subtle)',
+      'text-emphasis': 'var(--bs-dark-text-emphasis)',
+    }}
+  />
+</ColorPalette>

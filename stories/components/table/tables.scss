@@ -1,0 +1,12 @@
+.storybook-table {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  &--lg {
+    font-size: 1.125rem;
+
+    th,
+    td {
+      padding: 0.9rem 1rem;
+    }
+  }
+}
