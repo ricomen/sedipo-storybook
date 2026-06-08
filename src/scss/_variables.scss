@@ -76,9 +76,10 @@ $border-color:            #D3D3D3 !default;
 // $table-active-bg-factor:      .1 !default;
 // $table-active-bg:             rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor) !default;
 
-$table-hover-color:           red !default;
-$table-hover-bg-factor:       .075 !default;
-// $table-hover-bg:              rgba(var(--#{$prefix}emphasis-color-rgb), $table-hover-bg-factor) !default;
+// $table-hover-color:        var(--#{$prefix}emphasis-color) !default;
+// Ховер строки = ТЕНЬ, а не подкраска. См. `src/scss/_table.scss`.
+// Поэтому фактор подкраски обнулён, чтобы var(--bs-table-hover-bg) был прозрачным.
+$table-hover-bg-factor:       0 !default;
 
 // $table-border-factor:         .2 !default;
 // $table-border-width:          var(--#{$prefix}border-width) !default;
