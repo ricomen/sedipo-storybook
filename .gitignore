@@ -1,0 +1,70 @@
+# === Node / npm ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# === Логи ===
+*.log
+logs/
+
+# Логи и кэш самого Storybook CLI
+debug-storybook.log
+.storybook/.cache/
+storybook.log
+
+# === Storybook ===
+# Готовая статическая сборка Storybook (npm run build-storybook)
+storybook-static/
+# Альтернативные имена директорий сборки, если конфигурируется через --output-dir
+out/
+build-storybook/
+
+# === Сборщик Vite ===
+.vite/
+vite.config.*.timestamp-*
+
+# === Vitest / coverage (addon-vitest) ===
+coverage/
+.vitest-cache/
+*.lcov
+
+# === Playwright (бинарники качаются в кэш ОС, отчёты — локально) ===
+playwright-report/
+test-results/
+.playwright/
+blob-report/
+
+# === Переменные окружения и секреты ===
+.env
+.env.*
+!.env.example
+
+# === Кэши инструментов ===
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.cache/
+.tmp/
+tmp/
+
+# === TypeScript (на случай, если позже перейдёте на TS-конфиг) ===
+*.tsbuildinfo
+
+# === IDE / редакторы ===
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# === macOS / Windows / Linux служебные ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
