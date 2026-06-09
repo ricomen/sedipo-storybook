@@ -49,6 +49,23 @@ $dark-border-subtle:      #D3D3D3 !default;
 
 // Border variables
 $border-color:            #D3D3D3 !default;
+$border-radius-sm:        .375rem !default;
+
+$font-family-sans-serif: "Manrope Variable", "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+// scss-docs-start border-variables
+$border-width:                1px !default;
+// $border-widths: (
+//   1: 1px,
+//   2: 2px,
+//   3: 3px,
+//   4: 4px,
+//   5: 5px
+// ) !default;
+// $border-style:                solid !default;
+// $border-color:                $gray-300 !default;
+// $border-color-translucent:    rgba($black, .175) !default;
+// scss-docs-end border-variables
 
 // Tables
 //

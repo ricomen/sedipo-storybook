@@ -13,6 +13,7 @@
     "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.8",
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "playwright": "^1.60.0",
     "sass": "^1.100.0",
     "storybook": "^10.4.2",
@@ -34,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/ricomen/sedipo-storybook/issues"
   },
-  "homepage": "https://github.com/ricomen/sedipo-storybook#readme"
+  "homepage": "https://github.com/ricomen/sedipo-storybook#readme",
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8"
+  }
 }

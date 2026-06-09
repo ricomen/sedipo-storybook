@@ -1,3 +1,4 @@
+import '@fontsource-variable/manrope';
 import '../src/scss/main.scss';
 
 /** @type { import('@storybook/html-vite').Preview } */

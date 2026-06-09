@@ -44,3 +44,6 @@ $theme-colors: map-remove($theme-colors, "info");
 @import "bootstrap/scss/placeholders";
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities/api";
+
+// Bootstrap Icons (web-font, классы `.bi.bi-*`)
+@import "bootstrap-icons/font/bootstrap-icons.css";
