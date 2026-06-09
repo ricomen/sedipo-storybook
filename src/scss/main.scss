@@ -13,6 +13,7 @@ $theme-colors: map-remove($theme-colors, "info");
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
+@import "typography";
 @import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";

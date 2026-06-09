@@ -54,6 +54,67 @@ $border-radius-sm:        .375rem !default;
 
 $font-family-sans-serif: "Manrope Variable", "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 
+$enable-rfs: false !default;
+$font-size-base:              1rem !default;
+
+$font-weight-bold:            700 !default;
+
+// scss-docs-start font-variables
+// Монотонная иерархия: h1 → h6 идёт строго на убывание.
+$h1-font-size:                $font-size-base * 2 !default;     // 32px
+$h2-font-size:                $font-size-base * 1.5 !default;   // 24px
+$h3-font-size:                $font-size-base * 1.25 !default;  // 20px
+$h4-font-size:                $font-size-base * 1.125 !default; // 18px
+$h5-font-size:                $font-size-base * .875 !default; // 14px
+$h6-font-size:                $font-size-base * .75 !default;  // 12px
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+// scss-docs-end font-sizes
+
+// scss-docs-start headings-variables
+// Общие параметры всех h1–h6. Подхватываются bootstrap/scss/_type.scss.  // 8px
+         // наследуем base
+$headings-font-weight:        $font-weight-bold !default;  // 700
+// scss-docs-end headings-variables
+
+// Per-heading overrides — задают вес и межстрочный для конкретного уровня.
+$h1-font-weight:              600 !default;
+$h2-font-weight:              600 !default;
+$h3-font-weight:              600 !default;
+$h4-font-weight:              600 !default;
+$h5-font-weight:              $headings-font-weight !default;
+$h6-font-weight:              $headings-font-weight !default;
+
+$h1-line-height:              1.375 !default;
+$h2-line-height:              1.333 !default;
+$h3-line-height:              1.5 !default;
+$h4-line-height:              1.428 !default;
+$h5-line-height:              1.16 !default;
+$h6-line-height:              1.16 !default;
+
+// scss-docs-start display-headings
+// Классы .display-1 ... .display-6 — крупные «героические» заголовки для лендингов.
+$display-font-sizes: (
+  1: 4rem,     // 64px
+  2: 3rem,     // 48px
+  3: 2.5rem,   // 40px
+  4: 2rem,     // 32px
+  5: 1.75rem,  // 28px
+  6: 1.5rem    // 24px
+) !default;
+// scss-docs-end display-headings
+
+$small-font-size:             .75em !default;
+
 // scss-docs-start border-variables
 $border-width:                1px !default;
 // $border-widths: (
@@ -68,59 +129,13 @@ $border-width:                1px !default;
 // $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
-// Tables
-//
-// Customizes the `.table` component with basic values, each used across all table variations.
-
-// scss-docs-start table-variables
-// $table-cell-padding-y:        .5rem !default;
-// $table-cell-padding-x:        .5rem !default;
-// $table-cell-padding-y-sm:     .25rem !default;
-// $table-cell-padding-x-sm:     .25rem !default;
-
-// $table-cell-vertical-align:   top !default;
-
-// $table-color:                 var(--#{$prefix}emphasis-color) !default;
-// $table-bg:                    var(--#{$prefix}body-bg) !default;
-// $table-accent-bg:             transparent !default;
-
-// $table-th-font-weight:        null !default;
-
-// $table-striped-color:         $table-color !default;
-// $table-striped-bg-factor:     .05 !default;
-// $table-striped-bg:            rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor) !default;
-
-// $table-active-color:          $table-color !default;
-// $table-active-bg-factor:      .1 !default;
-// $table-active-bg:             rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor) !default;
-
-// $table-hover-color:        var(--#{$prefix}emphasis-color) !default;
-// Ховер строки = ТЕНЬ, а не подкраска. См. `src/scss/_table.scss`.
-// Поэтому фактор подкраски обнулён, чтобы var(--bs-table-hover-bg) был прозрачным.
-$table-hover-bg-factor:       0 !default;
-
-// $table-border-factor:         .2 !default;
-// $table-border-width:          var(--#{$prefix}border-width) !default;
-// $table-border-color:          var(--#{$prefix}border-color) !default;
-
-// $table-striped-order:         odd !default;
-// $table-striped-columns-order: even !default;
-
-// $table-group-separator-color: currentcolor !default;
-
-// $table-caption-color:         var(--#{$prefix}secondary-color) !default;
-
-// $table-bg-scale:              -80% !default;
-// // scss-docs-end table-variables
-
-// scss-docs-start input-btn-variables
 // Высота .btn = 2 * padding-y + line-height + 2 * border-width.
 // При line-height 1.25rem (20px) и border 1px нужно padding-y = 13px (0.8125rem),
 // чтобы итоговая высота кнопки была ровно 48px.
 $input-btn-padding-y:         .8125rem !default; // 13px → height = 26 + 20 + 2 = 48px
 $input-btn-padding-x:         1rem !default;
 
-$input-btn-line-height:       1.25rem !default;
+$input-btn-line-height:       1.25 !default;
 
 // $input-btn-focus-width:         $focus-ring-width !default;
 // $input-btn-focus-color-opacity: $focus-ring-opacity !default;
@@ -166,3 +181,12 @@ $input-btn-padding-x-sm:      .6875rem !default;
 // $btn-active-border-shade-amount:  25% !default;
 // $btn-active-border-tint-amount:   10% !default;
 // scss-docs-end btn-variables
+
+// scss-docs-start form-validation-colors
+// $form-valid-color:                  $form-feedback-valid-color !default;
+$form-valid-border-color:           $success-border-subtle !default;
+$form-invalid-border-color:         $danger-border-subtle !default;
+// scss-docs-end form-validation-colors
+
+$form-text-margin-top:                  .375rem !default;
+$form-label-margin-bottom:              .375rem !default;
