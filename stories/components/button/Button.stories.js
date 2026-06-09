@@ -160,6 +160,7 @@ export const AllButtons = {
       createButton({ ...args, variant: 'primary', label: 'Скачать', icon: 'download' }),
       createButton({ ...args, variant: 'outline-secondary', label: 'Изменить', icon: 'pencil' }),
       createButton({ ...args, variant: 'light', label: 'Сохранить', icon: 'save' }),
+      createButton({ ...args, variant: 'clean', label: 'Сохранить', icon: 'save' }),
       createButton({ ...args, variant: 'link', label: 'Открыть', icon: 'box-arrow-up-right' }),
     ]);
     root.appendChild(section('Icon at start', iconStart));
@@ -167,6 +168,8 @@ export const AllButtons = {
     const iconEnd = wrap([
       createButton({ ...args, variant: 'primary', label: 'Дальше', icon: 'arrow-right', iconPosition: 'end' }),
       createButton({ ...args, variant: 'outline-secondary', label: 'Подробнее', icon: 'chevron-right', iconPosition: 'end' }),
+      createButton({ ...args, variant: 'light', label: 'Подробнее', icon: 'chevron-right', iconPosition: 'end' }),
+      createButton({ ...args, variant: 'clean', label: 'Подробнее', icon: 'chevron-right', iconPosition: 'end' }),
       createButton({ ...args, variant: 'link', label: 'Подробнее', icon: 'chevron-right', iconPosition: 'end' }),
     ]);
     root.appendChild(section('Icon at end', iconEnd));
@@ -175,7 +178,8 @@ export const AllButtons = {
       createButton({ ...args, variant: 'primary', label: 'Добавить', icon: 'plus-lg', iconPosition: 'only' }),
       createButton({ ...args, variant: 'outline-secondary', label: 'Закрыть', icon: 'x-lg', iconPosition: 'only' }),
       createButton({ ...args, variant: 'light', label: 'Меню', icon: 'list', iconPosition: 'only' }),
-      createButton({ ...args, variant: 'outline-secondary', size: 'sm', label: 'Удалить', icon: 'trash', iconPosition: 'only' }),
+      createButton({ ...args, variant: 'clean', label: 'Удалить', icon: 'trash', iconPosition: 'only' }),
+
     ]);
     root.appendChild(section('Icon only', iconOnly));
 
