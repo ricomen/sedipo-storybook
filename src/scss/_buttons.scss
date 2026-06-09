@@ -1,0 +1,63 @@
+// Custom buttons: только нужные нам цветовые варианты.
+// База, размеры и .btn-link берутся из миксинов Bootstrap.
+
+@import "bootstrap/scss/mixins/buttons";
+
+// Map только для button-вариантов
+$button-variants: (
+  "primary":   $primary,
+);
+
+// Solid-варианты
+@each $color, $value in $button-variants {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+.btn-outline-secondary {
+  @include button-outline-variant(
+    $color:             $dark,
+    $color-hover:       $dark,
+    $active-background: $light,
+    $active-color:      $secondary,
+  );
+  --bs-btn-border-color: #{$border-color};
+  --bs-btn-hover-border-color: #{$border-color};
+  --bs-btn-active-border-color: #{$border-color};
+  --bs-btn-disabled-color: #{$secondary};
+  --bs-btn-disabled-border-color: #{$light-border-subtle};
+}
+
+.btn-light {
+  @include button-variant(
+    $background:          $light,
+    $color:               $dark,
+    $hover-color:         $dark,
+    $border:              $light,
+    $hover-background:    $dark-bg-subtle,
+    $hover-border:        $dark-bg-subtle,
+    $active-background:   $dark-bg-subtle,
+    $active-border:       $dark-bg-subtle,
+    $disabled-color:       tint-color($dark, 50%),
+    $disabled-border:     $dark-bg-subtle,
+    $disabled-background: transparent,
+  );
+}
+
+.btn-clean {
+  @include button-variant(
+    $background:          transparent,
+    $border:              transparent,
+    $color:               $primary,
+    $hover-background:    $primary-bg-subtle,
+    $hover-border:        $primary-bg-subtle,
+    $hover-color:         shade-color($primary, 15%),
+    $active-background:   $primary-bg-subtle,
+    $active-border:       $primary-bg-subtle,
+    $active-color:        $primary,
+    $disabled-background: transparent,
+    $disabled-border:     transparent,
+    $disabled-color:      tint-color($primary, 50%),
+  );
+}
