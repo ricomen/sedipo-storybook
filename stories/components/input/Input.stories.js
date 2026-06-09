@@ -1,6 +1,6 @@
 import { fn } from 'storybook/test';
 
-import { INPUT_OVERLAY_SIZES, createInputOverlay } from './InputOverlay';
+import { INPUT_SIZES, createInput } from './Input';
 
 const cleanAction = (overrides = {}) => ({
   variant: 'clean',
@@ -12,13 +12,13 @@ const cleanAction = (overrides = {}) => ({
 });
 
 export default {
-  title: 'Example/Input overlay',
+  title: 'Example/Input',
   tags: ['autodocs'],
-  render: (args) => createInputOverlay(args),
+  render: (args) => createInput(args),
   argTypes: {
     size: {
       control: { type: 'inline-radio' },
-      options: INPUT_OVERLAY_SIZES,
+      options: INPUT_SIZES,
     },
     type: { control: 'text' },
     placeholder: { control: 'text' },

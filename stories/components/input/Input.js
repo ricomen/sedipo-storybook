@@ -5,11 +5,11 @@
 
 import { createButton } from '../button/Button';
 
-export const INPUT_OVERLAY_SIZES = ['sm', 'md'];
+export const INPUT_SIZES = ['sm', 'md'];
 
 const formControlSizeClass = (size) => (size === 'sm' ? 'form-control-sm' : '');
 
-export const createInputOverlay = ({
+export const createInput = ({
   id,
   size = 'md',
   type = 'text',
