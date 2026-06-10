@@ -117,16 +117,6 @@ $small-font-size:             .75em !default;
 
 // scss-docs-start border-variables
 $border-width:                1px !default;
-// $border-widths: (
-//   1: 1px,
-//   2: 2px,
-//   3: 3px,
-//   4: 4px,
-//   5: 5px
-// ) !default;
-// $border-style:                solid !default;
-// $border-color:                $gray-300 !default;
-// $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // Высота .btn = 2 * padding-y + line-height + 2 * border-width.
@@ -137,54 +127,11 @@ $input-btn-padding-x:         1rem !default;
 
 $input-btn-line-height:       1.25 !default;
 
-// $input-btn-focus-width:         $focus-ring-width !default;
-// $input-btn-focus-color-opacity: $focus-ring-opacity !default;
-// $input-btn-focus-color:         $focus-ring-color !default;
-// $input-btn-focus-blur:          $focus-ring-blur !default;
-// $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
-
 $input-btn-padding-y-sm:      .5rem !default;
 $input-btn-padding-x-sm:      .6875rem !default;
-// $input-group-addon-bg:
-// $input-btn-font-size-sm:      $font-size-sm !default;
 
-// $input-btn-padding-y-lg:      .5rem !default;
-// $input-btn-padding-x-lg:      1rem !default;
-// $input-btn-font-size-lg:      $font-size-lg !default;
-
-// $input-btn-border-width:      var(--#{$prefix}border-width) !default;
-// scss-docs-end input-btn-variables
-
-// scss-docs-start btn-variables
-// $btn-padding-y:               $input-btn-padding-y !default;
-// $btn-padding-x:               $input-btn-padding-x !default;
-// $btn-font-family:             $input-btn-font-family !default;
-// $btn-font-size:               $input-btn-font-size !default;
-// $btn-line-height:             $input-btn-line-height !default;
-// $btn-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
-
-// $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-// $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-// $btn-font-size-sm:            $input-btn-font-size-sm !default;
-
-// $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
-// $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
-// $btn-font-size-lg:            $input-btn-font-size-lg !default;
-
-// $btn-border-width:            $input-btn-border-width !default;
-
-// $btn-hover-bg-shade-amount:       15% !default;
-// $btn-hover-bg-tint-amount:        15% !default;
-// $btn-hover-border-shade-amount:   20% !default;
-// $btn-hover-border-tint-amount:    10% !default;
-// $btn-active-bg-shade-amount:      20% !default;
-// $btn-active-bg-tint-amount:       20% !default;
-// $btn-active-border-shade-amount:  25% !default;
-// $btn-active-border-tint-amount:   10% !default;
-// scss-docs-end btn-variables
 
 // scss-docs-start form-validation-colors
-// $form-valid-color:                  $form-feedback-valid-color !default;
 $form-valid-border-color:           $success-border-subtle !default;
 $form-invalid-border-color:         $danger-border-subtle !default;
 // scss-docs-end form-validation-colors
@@ -192,12 +139,9 @@ $form-invalid-border-color:         $danger-border-subtle !default;
 $form-text-margin-top:                  .375rem !default;
 $form-label-margin-bottom:              .375rem !default;
 
-// scss-docs-start alert-variables
-// $alert-padding-y:               $spacer !default;
-// $alert-padding-x:               $spacer !default;
-// $alert-margin-bottom:           1rem !default;
-// $alert-border-radius:           var(--#{$prefix}border-radius) !default;
-// $alert-link-font-weight:        $font-weight-bold !default;
-// $alert-border-width:            var(--#{$prefix}border-width) !default;
-// $alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
-// scss-docs-end alert-variables
+// Navbar
+$navbar-nav-link-padding-x:     1.5rem;   // 24px
+$navbar-nav-link-padding-y:     0.5rem;   // 8px
+$navbar-brand-margin-end:       2.875rem;
+// $token-navbar-link-gap:            0.25rem;  // 4px
+// $token-navbar-logo-size:           2.5rem;   // 40px

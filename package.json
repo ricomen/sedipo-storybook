@@ -22,7 +22,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "clean": "rm -rf dist",
+    "build:fonts": "mkdir -p dist/fonts && cp node_modules/bootstrap-icons/font/fonts/* dist/fonts/ && cp node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2 node_modules/@fontsource-variable/manrope/files/manrope-cyrillic-wght-normal.woff2 dist/fonts/",
+    "build:css": "sass src/scss/main.scss dist/css/bootstrap.min.css --style=compressed --no-source-map --load-path=node_modules --quiet-deps --silence-deprecation=import,global-builtin,color-functions",
+    "build:manrope": "sass src/scss/manrope.scss dist/css/manrope.min.css --style=compressed --no-source-map",
+    "build": "npm run clean && npm run build:fonts && npm run build:css && npm run build:manrope"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,65 @@
+// =============================================================================
+// Shadow replacement for bootstrap/scss/mixins/_caret.scss
+//
+// SVG chevron via CSS mask + currentColor (Figma node-id=54:11871).
+// Same API as Bootstrap: @mixin caret($direction, $width, $spacing, $vertical-align)
+// =============================================================================
+
+@mixin caret-svg-shape($direction: down) {
+  border: 0;
+  width: $caret-icon-width;
+  height: $caret-icon-height;
+  background-color: currentColor;
+  -webkit-mask: escape-svg($caret-icon-down) no-repeat center / contain;
+  mask: escape-svg($caret-icon-down) no-repeat center / contain;
+
+  @if $direction == up {
+    transform: rotate(180deg);
+  } @else if $direction == end {
+    transform: rotate(-90deg);
+  } @else if $direction == start {
+    transform: rotate(90deg);
+  }
+}
+
+@mixin caret(
+  $direction: down,
+  $width: $caret-width,
+  $spacing: $caret-spacing,
+  $vertical-align: $caret-vertical-align
+) {
+  @if $enable-caret {
+    &::after {
+      display: inline-block;
+      margin-left: $spacing;
+      vertical-align: $vertical-align;
+      content: "";
+
+      @if $direction == down {
+        @include caret-svg-shape(down);
+      } @else if $direction == up {
+        @include caret-svg-shape(up);
+      } @else if $direction == end {
+        @include caret-svg-shape(end);
+      }
+    }
+
+    @if $direction == start {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $spacing;
+        vertical-align: $vertical-align;
+        content: "";
+        @include caret-svg-shape(start);
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}
