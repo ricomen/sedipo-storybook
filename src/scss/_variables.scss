@@ -145,6 +145,7 @@ $input-btn-line-height:       1.25 !default;
 
 $input-btn-padding-y-sm:      .5rem !default;
 $input-btn-padding-x-sm:      .6875rem !default;
+// $input-group-addon-bg:
 // $input-btn-font-size-sm:      $font-size-sm !default;
 
 // $input-btn-padding-y-lg:      .5rem !default;
@@ -190,3 +191,13 @@ $form-invalid-border-color:         $danger-border-subtle !default;
 
 $form-text-margin-top:                  .375rem !default;
 $form-label-margin-bottom:              .375rem !default;
+
+// scss-docs-start alert-variables
+// $alert-padding-y:               $spacer !default;
+// $alert-padding-x:               $spacer !default;
+// $alert-margin-bottom:           1rem !default;
+// $alert-border-radius:           var(--#{$prefix}border-radius) !default;
+// $alert-link-font-weight:        $font-weight-bold !default;
+// $alert-border-width:            var(--#{$prefix}border-width) !default;
+// $alert-dismissible-padding-r:   $alert-padding-x * 3 !default; // 3x covers width of x plus default padding on either side
+// scss-docs-end alert-variables

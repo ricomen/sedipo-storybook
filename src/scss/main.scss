@@ -7,6 +7,9 @@
 
 $theme-colors: map-remove($theme-colors, "info");
 
+$bootstrap-icons-font-dir: "../../node_modules/bootstrap-icons/font/fonts";
+@import "bootstrap-icons/font/bootstrap-icons";
+
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
@@ -33,6 +36,7 @@ $theme-colors: map-remove($theme-colors, "info");
 @import "bootstrap/scss/pagination";
 @import "bootstrap/scss/badge";
 @import "bootstrap/scss/alert";
+@import "alert";
 @import "bootstrap/scss/progress";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
@@ -46,6 +50,3 @@ $theme-colors: map-remove($theme-colors, "info");
 @import "bootstrap/scss/placeholders";
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities/api";
-
-// Bootstrap Icons (web-font, классы `.bi.bi-*`)
-@import "bootstrap-icons/font/bootstrap-icons.css";
