@@ -1,0 +1,25 @@
+.badge-sm {
+  // --bs-badge-padding-x: .5em;     // 8px при базовом 16px
+  // --bs-badge-padding-y: .1875em;    // 4px
+  --bs-badge-font-size: .75rem;   // 12px
+}
+
+.badge-soft-primary {
+  --bs-badge-color: #{$primary-text-emphasis};
+  background-color: $primary-bg-subtle;
+}
+
+.badge-soft-success {
+  --bs-badge-color: #{$success-text-emphasis};
+  background-color: $success-bg-subtle;
+}
+
+.badge-soft-danger {
+  --bs-badge-color: #{$danger-text-emphasis};
+  background-color: $danger-bg-subtle;
+}
+
+.badge-soft-warning {
+  --bs-badge-color: #{$warning-text-emphasis};
+  background-color: $warning-bg-subtle;
+}

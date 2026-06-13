@@ -50,7 +50,23 @@ $dark-border-subtle:      #D3D3D3 !default;
 
 // Border variables
 $border-color:            #D3D3D3 !default;
-$border-radius-sm:        .375rem !default;
+$border-radius-sm:        .375rem !default; // 6px
+
+// scss-docs-start spacer-variables-maps
+// Базовый шаг отступов. Все ключи $spacers генерируют утилиты:
+// .m-*, .p-*, .mt/mb/ms/me/mx/my-*, .gap-*, .row-gap-*, .column-gap-*
+// и их responsive-варианты (.m-md-6, .p-lg-7, ...).
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,   // 4px
+  2: $spacer * .5,    // 8px
+  3: $spacer,         // 16px
+  4: $spacer * 1.5,   // 24px
+  5: $spacer * 2,     // 32px
+  6: $spacer * 3,     // 48px
+) !default;
+// scss-docs-end spacer-variables-maps
 
 $font-family-sans-serif: "Manrope Variable", "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 
@@ -145,3 +161,9 @@ $navbar-nav-link-padding-y:     0.5rem;   // 8px
 $navbar-brand-margin-end:       2.875rem;
 // $token-navbar-link-gap:            0.25rem;  // 4px
 // $token-navbar-logo-size:           2.5rem;   // 40px
+
+// Badge
+$badge-font-size:                   .875rem;  // 14px
+$badge-padding-y:                   .3125rem;  // 5.6px
+$badge-padding-x:                   .75rem;  // 10.4px
+$badge-border-radius:               50rem;  // pill — большое фиксированное значение, чтобы торцы были круглыми, а не овальными

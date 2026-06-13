@@ -35,6 +35,7 @@ $bootstrap-icons-font-dir: "../fonts";
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/pagination";
 @import "bootstrap/scss/badge";
+@import "badge";
 @import "bootstrap/scss/alert";
 @import "alert";
 @import "bootstrap/scss/progress";
@@ -52,6 +53,7 @@ $bootstrap-icons-font-dir: "../fonts";
 @import "bootstrap/scss/utilities/api";
 
 
-.container-md-fix {
+.container-md-fixed {
+    margin: 0 auto;
     width: 720px;
 }
