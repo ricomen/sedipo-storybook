@@ -116,7 +116,7 @@ const createNavbarDropdown = (item = {}) => {
   return li;
 };
 
-const createNavList = (items, className = 'navbar-nav mb-2 mb-lg-0') => {
+const createNavList = (items, className = 'navbar-nav') => {
   const ul = document.createElement('ul');
   ul.className = className;
 
@@ -135,7 +135,6 @@ const createBrand = (brand) => {
   const a = document.createElement('a');
   a.className = 'navbar-brand';
   a.href = brand.href || '/';
-  a.style.marginLeft = '8px';
 
   if (brand.logoSrc) {
     const img = document.createElement('img');
@@ -157,7 +156,6 @@ const createBrand = (brand) => {
 const createOffcanvasToggler = ({ target = '#offcanvas' } = {}) => {
   const wrap = document.createElement('div');
   wrap.className = 'navbar-brand';
-  wrap.style.marginLeft = '8px';
 
   const btn = document.createElement('button');
   btn.className = 'navbar-toggler';
@@ -181,16 +179,14 @@ export const createNavbar = ({
   rightItems = [],
   expand = 'lg',
   theme = 'light',
-  bgColor,
   containerFluid = true,
   showOffcanvasToggler = true,
   offcanvasTarget = '#offcanvas',
   collapseId = 'navbar-content',
 } = {}) => {
   const nav = document.createElement('nav');
-  nav.className = `navbar navbar-expand-${expand} bg-light bg-body-tertiary`;
+  nav.className = `navbar navbar-expand-${expand}`;
   nav.setAttribute('data-bs-theme', theme);
-  if (bgColor) nav.style.backgroundColor = bgColor;
 
   const container = document.createElement('div');
   container.className = containerFluid ? 'container-fluid' : 'container';
