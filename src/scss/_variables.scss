@@ -159,11 +159,26 @@ $form-label-margin-bottom:              .375rem !default;
 $navbar-nav-link-padding-x:     1.5rem;   // 24px
 $navbar-nav-link-padding-y:     0.5rem;   // 8px
 $navbar-brand-margin-end:       2.875rem;
-// $token-navbar-link-gap:            0.25rem;  // 4px
-// $token-navbar-logo-size:           2.5rem;   // 40px
+$nav-link-font-weight:          600;
+
 
 // Badge
 $badge-font-size:                   .875rem;  // 14px
 $badge-padding-y:                   .3125rem;  // 5.6px
 $badge-padding-x:                   .75rem;  // 10.4px
-$badge-border-radius:               50rem;  // pill — большое фиксированное значение, чтобы торцы были круглыми, а не овальными
+$badge-border-radius:               50rem;  // pill
+
+// Caret (dropdown icon) — рисуем глифом из Bootstrap Icons.
+// Штатный border-треугольник Bootstrap отключаем, иначе он наложится
+// поверх нашего ::after content.
+$enable-caret:               false;
+
+$caret-icon-font-size:       1rem;     // 12px
+$caret-icon-spacing:         .5rem;
+$caret-icon-vertical-align:  -.125em;    // как у .bi
+
+// Глифы для 4 направлений (см. node_modules/bootstrap-icons/font/bootstrap-icons.scss)
+$caret-icon-down:            "\f282";    // bi-chevron-down
+$caret-icon-up:              "\f286";    // bi-chevron-up
+$caret-icon-end:             "\f285";    // bi-chevron-right
+$caret-icon-start:           "\f284";    // bi-chevron-left

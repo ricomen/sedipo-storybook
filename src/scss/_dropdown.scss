@@ -1,0 +1,32 @@
+%caret-icon {
+  display: inline-block;
+  font-family: "bootstrap-icons";
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  font-size: $caret-icon-font-size;
+  line-height: 1;
+  text-transform: none;
+  vertical-align: $caret-icon-vertical-align;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-toggle::after {
+  @extend %caret-icon;
+  margin-left: $caret-icon-spacing;
+  content: $caret-icon-down;
+}
+
+.dropup .dropdown-toggle::after  { content: $caret-icon-up; }
+.dropend .dropdown-toggle::after { content: $caret-icon-end; }
+
+.dropstart .dropdown-toggle::after { display: none; }
+.dropstart .dropdown-toggle::before {
+  @extend %caret-icon;
+  margin-right: $caret-icon-spacing;
+  content: $caret-icon-start;
+}
+
+.dropdown-toggle:empty::after { margin-left: 0; }
