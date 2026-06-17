@@ -19,7 +19,7 @@ $body-secondary-bg:         $light !default;
 // Use the bg option to style backgrounds for hover states, 
 // accents, and wells.
 // $body-tertiary-color:       tint-color($dark, 50%) !default;
-$body-tertiary-bg:          tint-color($dark, 50%) !default;
+$body-tertiary-bg:         tint-color($dark, 95%) !default;
 
 // scss-docs-start theme-text-variables
 $primary-text-emphasis:   $primary !default;
@@ -72,6 +72,7 @@ $font-family-sans-serif: "Manrope Variable", "Manrope", system-ui, -apple-system
 
 $enable-rfs: false !default;
 $font-size-base:              1rem !default;
+$font-size-sm:                $font-size-base * .875 !default;
 
 $font-weight-bold:            700 !default;
 
@@ -143,8 +144,27 @@ $input-btn-padding-x:         1rem !default;
 
 $input-btn-line-height:       1.25 !default;
 
-$input-btn-padding-y-sm:      .5rem !default;
-$input-btn-padding-x-sm:      .6875rem !default;
+$input-btn-padding-y-sm:      .578125rem !default; // 9.25px → height(sm)= 2*9.25 + (14*1.25) + 2 = 38px
+$input-btn-padding-x-sm:      .6875rem !default; // 11px → icon-only btn-sm ≈ 2*11 + 14 + 2 = 38px
+$input-btn-font-size-sm:      $font-size-sm !default;
+
+// Приводим form controls (input/select/textarea) к тем же метрикам, что и .btn,
+// чтобы совпадали высота и вертикальный ритм.
+$input-padding-y:             $input-btn-padding-y !default;
+$input-padding-x:             $input-btn-padding-x !default;
+$input-line-height:           $input-btn-line-height !default;
+
+$input-padding-y-sm:          $input-btn-padding-y-sm !default;
+$input-padding-x-sm:          $input-btn-padding-x-sm !default;
+$input-line-height-sm:        $input-btn-line-height !default;
+
+$form-select-padding-y:       $input-padding-y !default;
+$form-select-padding-x:       $input-padding-x !default;
+$form-select-line-height:     $input-line-height !default;
+
+$form-select-padding-y-sm:    $input-padding-y-sm !default;
+$form-select-padding-x-sm:    $input-padding-x-sm !default;
+$form-select-line-height-sm:  $input-line-height-sm !default;
 
 
 // scss-docs-start form-validation-colors
@@ -160,7 +180,6 @@ $navbar-nav-link-padding-x:     1.5rem;   // 24px
 $navbar-nav-link-padding-y:     0.5rem;   // 8px
 $navbar-brand-margin-end:       2.875rem;
 $nav-link-font-weight:          600;
-
 
 // Badge
 $badge-font-size:                   .875rem;  // 14px
@@ -182,3 +201,9 @@ $caret-icon-down:            "\f282";    // bi-chevron-down
 $caret-icon-up:              "\f286";    // bi-chevron-up
 $caret-icon-end:             "\f285";    // bi-chevron-right
 $caret-icon-start:           "\f284";    // bi-chevron-left
+
+//table
+$table-hover-bg:              $primary-bg-subtle;
+
+// form-select-sm
+$form-select-font-size-sm:        $font-size-sm !default;  
